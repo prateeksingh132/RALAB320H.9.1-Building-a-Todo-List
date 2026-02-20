@@ -6,6 +6,7 @@ import todoReducer, { initialState } from './reducers/todoReducer';
 import { useReducer } from 'react';
 import TodoItem from './components/TodoItem.jsx';
 import TodoForm from './components/TodoForm.jsx';
+import axios from 'axios';
 
 
 function App() {
@@ -24,12 +25,24 @@ function App() {
 
 
   // handler function where i wil put all my logic for fetching the api data
-  const handleFetch = () => {
-
+  const handleFetch = async () => {
 
     ////////////TESTING
-    console.log("TESTING: fetch button clicked!!!!!!");
+    //console.log("TESTING: fetch button clicked!!!!!!");
     ////////////
+
+    try {
+      // fetching api data using axios, i am gonna use the limit = 10 for now, there are 200 api data object
+      let res = await axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10");
+
+      ////////////TESTING
+      console.log("TESTING api data: ", res.data);
+      ////////////
+
+    } catch (err) {
+      console.error(err.message);
+      alert("failed to fetch api data!!!");
+    }
 
   };
 
