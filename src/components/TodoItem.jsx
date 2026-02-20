@@ -75,6 +75,7 @@ export default function TodoItem({ todo, dispatch }) {
                     {/* also, i have to the disable the delete button if the task is not completed */}
                     {/* i have added an onclick event here which dispatches the delete_task action with the specific todo.id as the payload... */}
                     <button
+                        className="delete-btn"
                         disabled={!todo.completed}
                         onClick={() => dispatch({ type: 'DELETE_TASK', payload: todo.id })}
                     >

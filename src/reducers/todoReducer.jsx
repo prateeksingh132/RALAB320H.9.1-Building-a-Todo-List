@@ -75,14 +75,10 @@ export default function todoReducer(state, action) {
         case 'LOAD_API_DATA':
             // goal: i wanna take the data from the api and put it in our state.
             // logic: i m just replacing the current state entirely with the api data (action.payload).
-            // FUTUREWORK: maybe i could add logic to merge them instead of replacing? will see
+            // FUTUREWORK: add logic to merge them instead of replacing
             return action.payload;
 
 
-            // goal: i wanna try to update the api to match the local state
-            // logic
-
-            
 
         default:
             return state;

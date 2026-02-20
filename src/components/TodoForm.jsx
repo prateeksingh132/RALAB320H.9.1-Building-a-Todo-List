@@ -8,7 +8,7 @@ export default function TodoForm({ dispatch }) {
 
 
     const handleSubmit = (e) => {
-        // stops the browser from doing a full page reload
+        
         e.preventDefault();
 
 

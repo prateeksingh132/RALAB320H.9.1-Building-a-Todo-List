@@ -58,16 +58,17 @@ function App() {
       <TodoForm dispatch={dispatch} />
 
       {/* i am adding a button below the form which will fetch data from the external api */}
-      <button
+      <button className="fetch-btn"
         onClick={handleFetch}
-        // FUTUREWORK: add it later in the app.css
-        style={{ marginBottom: '20px', padding: '10px 15px', background: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+        // FUTUREWORK: add styling later in the app.css -- DONE
+      
       >
         Load API Data
       </button>
 
 
-      <div>
+      {/* i am gonna add the scrollbar styling for the list here, if the list grows too long, or more initial data are loaded through api */}
+      <div style={{ width: '100%', maxHeight: '60vh', overflowY: 'auto', paddingRight: '10px' }}>
         {/* i have created a new todoitems componenet, replacing the divs with my todoitem componenent now */}
         {todos.map(todo => (
           <TodoItem key={todo.id} todo={todo} dispatch={dispatch} />
