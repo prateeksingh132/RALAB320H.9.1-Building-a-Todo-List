@@ -5,6 +5,7 @@ import './App.css'
 import todoReducer, { initialState } from './reducers/todoReducer';
 import { useReducer } from 'react';
 import TodoItem from './components/TodoItem.jsx';
+import TodoForm from './components/TodoForm.jsx';
 
 
 function App() {
@@ -27,10 +28,13 @@ function App() {
     <div className="app-container">
       <h1>Todo List</h1>
 
+      {/* adding the new component todoform here at the start for adding task functionality  */}
+      <TodoForm />
+
       <div>
         {/* i have created a new todoitems componenet, replacing the divs with my todoitem componenent now */}
         {todos.map(todo => (
-          <TodoItem key={todo.id} todo={todo} dispatch={dispatch}/>
+          <TodoItem key={todo.id} todo={todo} dispatch={dispatch} />
         ))}
       </div>
     </div>
