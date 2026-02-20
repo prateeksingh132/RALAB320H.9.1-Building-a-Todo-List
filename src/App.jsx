@@ -30,7 +30,7 @@ function App() {
       <div>
         {/* i have created a new todoitems componenet, replacing the divs with my todoitem componenent now */}
         {todos.map(todo => (
-          <TodoItem key={todo.id} todo={todo} />
+          <TodoItem key={todo.id} todo={todo} dispatch={dispatch}/>
         ))}
       </div>
     </div>

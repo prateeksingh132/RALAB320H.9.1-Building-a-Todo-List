@@ -1,5 +1,5 @@
 // goal: so i wanna create a reusable component for individual todo items
-export default function TodoItem({ todo }) {
+export default function TodoItem({ todo, dispatch }) {
 
     // logic: i m just gonna build a basic ui right now with basic styling, just to get a visual layout. i will wire up the dispatch actions in the next steps.
 
@@ -19,7 +19,11 @@ export default function TodoItem({ todo }) {
             <button>Edit</button>
 
             {/* also, i have to the disable the delete button if the task is not completed */}
-            <button disabled={!todo.completed}>
+            {/* i have added an onclick event here which dispatches the delete_task action with the specific todo.id as the payload... */}
+            <button
+                disabled={!todo.completed}
+                onClick={() => dispatch({ type: 'DELETE_TASK', payload: todo.id })}
+            >
                 Delete
             </button>
 
