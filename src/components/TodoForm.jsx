@@ -26,8 +26,9 @@ export default function TodoForm({ dispatch }) {
         }
 
         // logic: i m gonna create the new task object now that matches the structure of our initial state.
-        // problem is how do i design the logic for new task object userid which should be unique bcuz key prop needs that else it will break.  
-        // some examples on stackoverflow used date.now() to tackle unique id issue. the idea is to generate random ids so the application doesnt complain about duplicate keys
+        // problem is how do i design the logic for new task object userid which should be unique bcuz key prop needs that else it will throw warning. 
+        // previous bug: if i dont make it unique, it will still runs though and i can see the new task but i dont see the new task object i added in edit mode, it shows the previous object with same id  
+        // some examples on stackoverflow used date.now() to tackle unique id issue. the idea is to generate random ids so the application doesnt throw bugs and complain about duplicate keys
         const newTask = {
             userId: 1,
             id: Date.now(),

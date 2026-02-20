@@ -79,6 +79,11 @@ export default function todoReducer(state, action) {
             return action.payload;
 
 
+            // goal: i wanna try to update the api to match the local state
+            // logic
+
+            
+
         default:
             return state;
     }
