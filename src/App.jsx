@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import todoReducer, { initialState } from './reducers/todoReducer';
 import { useReducer } from 'react';
+import TodoItem from './components/TodoItem.jsx';
 
 
 function App() {
@@ -26,12 +27,10 @@ function App() {
     <div className="app-container">
       <h1>Todo List</h1>
 
-      {/* for the time being, i am gonna use the .map() to loop through my state and put the titles to the screen for now. */}
       <div>
+        {/* i have created a new todoitems componenet, replacing the divs with my todoitem componenent now */}
         {todos.map(todo => (
-          <div key={todo.id} style={{ border: '1px solid white', background: 'yellow' }}>
-            {todo.title}
-          </div>
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </div>
     </div>
