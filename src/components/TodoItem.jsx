@@ -9,6 +9,8 @@ export default function TodoItem({ todo, dispatch }) {
             <input
                 type="checkbox"
                 checked={todo.completed}
+                onChange={() => dispatch({ type: 'TOGGLE_COMPLETE', payload: todo.id })}
+                
             />
 
             {/* logic: if the task is completed, put a strike-through line on the text. flexgrow pushes the buttons to the right. */}
