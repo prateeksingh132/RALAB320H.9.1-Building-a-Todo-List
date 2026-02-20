@@ -36,8 +36,11 @@ function App() {
       let res = await axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10");
 
       ////////////TESTING
-      console.log("TESTING api data: ", res.data);
+      //console.log("TESTING api data: ", res.data);
       ////////////
+
+      // dispatching the data to our reducer
+      dispatch({ type: 'LOAD_API_DATA', payload: res.data });
 
     } catch (err) {
       console.error(err.message);
