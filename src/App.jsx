@@ -29,7 +29,7 @@ function App() {
       <h1>Todo List</h1>
 
       {/* adding the new component todoform here at the start for adding task functionality  */}
-      <TodoForm />
+      <TodoForm dispatch={dispatch}/>
 
       <div>
         {/* i have created a new todoitems componenet, replacing the divs with my todoitem componenent now */}
