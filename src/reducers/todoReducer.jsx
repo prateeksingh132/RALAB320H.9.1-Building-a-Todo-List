@@ -37,6 +37,16 @@ export default function todoReducer(state, action) {
             // logic: i am gonna use the .filter() method here 
             return state.filter(todo => todo.id !== action.payload);
 
+        case 'TOGGLE_COMPLETE':
+            // goal: here, i have to flip the completed boolean for a specific task.
+            // logic: i am gonna map through the state array. if the id matches the payload, i will return a new object with the completed status changes. otherwise, just return the regular todo object.
+            return state.map(todo => {
+                if (todo.id === action.payload) {
+                    return { ...todo, completed: !todo.completed };
+                }
+                return todo;
+            });
+
         default:
             return state;
     }
