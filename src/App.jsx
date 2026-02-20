@@ -5,7 +5,7 @@ import './App.css'
 import todoReducer, { initialState } from './reducers/todoReducer';
 
 ////////////TESTING
-const testAction = { type: 'ADD_TASK', payload: { id: 99, title: 'erfgddfsfds', completed: false } };
+const testAction = { type: 'DELETE_TASK', payload: 2 };
 const testState = todoReducer(initialState, testAction);
 
 ////////////TESTING

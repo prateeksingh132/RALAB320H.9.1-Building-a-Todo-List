@@ -32,6 +32,11 @@ export default function todoReducer(state, action) {
             // i put action.payload first so the newest task appears at the top, just like the assignment asked
             return [action.payload, ...state];
 
+        case 'DELETE_TASK':
+            // goal: i have to remove a task from the state based on its id.
+            // logic: i am gonna use the .filter() method here 
+            return state.filter(todo => todo.id !== action.payload);
+
         default:
             return state;
     }
