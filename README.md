@@ -19,6 +19,18 @@ I checked the requirement list one by one and implemented them in my code:
 * **API Fetch:** i added a button that pulls data (limit 10) from the jsonplaceholder api and replaces the current state.
 
 
+## Testing
+
+I have created (and used during code creation) test points (log statement) at multiple places in the code, I have not removed them. They are commented at the time of submission and can be uncommented for future debugging and code check. These code checks looks something like:
+
+
+////////////TESTING
+
+//console.log('TESTING: assignment: ', assignment);
+
+////////////
+
+
 # References
 
 https://stackoverflow.com/questions/64093871/todo-list-with-usereducer-and-mongodb-error-todo-map-is-not-a-function
