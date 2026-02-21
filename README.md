@@ -16,7 +16,7 @@ I checked the requirement list one by one and implemented them in my code:
 * **Add Task:** user can add a new task, and it automatically goes to the top of the list.
 * **Edit Task:** clicking edit replaces the todo text into an input box, then the user can edit the todo.
 * **Delete:** the delete button is totally disabled until the user checks the "completed" checkbox.
-* **API Fetch:** i added a button that pulls data (limit 10) from the jsonplaceholder api and replaces the current state.
+* **API Fetch:** i added a button that pulls data (limit 10, can be changed in the api url) from the jsonplaceholder api and replaces the current state.
 
 
 ## Testing
